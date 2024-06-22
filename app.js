@@ -54,7 +54,7 @@ botonTipos.addEventListener('click', () => {
             listapokemones.innerHTML = "";
 
             for (let i = 1; i <= 1010; i++) {
-                fetch(URL + i)
+                fetch(URL+i)
                     .then(response => response.json())
                     .then(data => {
                         const tipos = data.types.map(type => type.type.name);
@@ -102,7 +102,7 @@ botonBuscar.addEventListener('click', () => {
     // Añadir el formulario de búsqueda
     div.innerHTML = `
         <form id="formBuscar">
-            <input type="text" id="noBuscado" placeholder="Busqueda...">
+            <input type="text" id="noBuscado" placeholder="Busqueda..." autocomplete="off">
             <button type="submit"><i class="fa-solid fa-magnifying-glass slide_down"></i></button>
         </form>
         <div id="busquedapokemon"></div>
@@ -113,19 +113,27 @@ botonBuscar.addEventListener('click', () => {
 
     // Agregar evento submit al formulario
     document.querySelector('#formBuscar').addEventListener('submit', buscar);
+   
+    
 });
 
 
 
 
-
+   
+       
 
 function obtenerValorInput() {
     return document.getElementById('noBuscado').value;
+
+    
+      
 }
 
 // Función para buscar el Pokémon
 async function buscar(event) {
+
+ 
     // Prevenir el comportamiento por defecto del formulario
     event.preventDefault();
 
@@ -139,9 +147,14 @@ async function buscar(event) {
         // Hacer la solicitud fetch
         let response = await fetch(URL+resp);
 
+            setTimeout(() => {
+            document.getElementById('noBuscado').value = '';
+        }, 2000);
+
         // Verificar si la respuesta es correcta
         if (!response.ok) {
             throw new Error('No se encontró el Pokémon ,porfavor busque otro');
+          
         }
 
         // Convertir la respuesta a JSON
@@ -151,14 +164,15 @@ async function buscar(event) {
         let audioUrl = `https://play.pokemonshowdown.com/audio/cries/${poke.name.toLowerCase()}.mp3`
 
         // Mostrar la información del Pokémon
-       
+
+   
         document.getElementById('listapokemones').innerHTML = `
          <div class="buscarpokemon">
             <div class="pokemonb" id="busquedapokemon">
         <div class="img-pokemon-b">
             <img src="${poke.sprites.other['official-artwork'].front_default}" alt="${poke.name}">
             <div class="info-pokemon-b">
-                <p class="id_inf">#${poke.id}</p>
+                <p class="id_inf id">#${poke.id}</p>
                 <h2 class="nombre">${poke.name}</h2>
                 <div class="altura">
                     <h4 class="altura1">Altura: ${poke.height / 10} m</h4>
@@ -189,9 +203,18 @@ async function buscar(event) {
         document.getElementById('playSound').addEventListener('click', () => {
             audioElement.play();
         });
+    
+
+       setTimeout(() => {
+            document.getElementById('noBuscado').value = '';
+        }, 2000);
+   
 
     } catch (error) {
         // Manejar errores 
         alert(error.message);
     }
+
+   
+    
 }

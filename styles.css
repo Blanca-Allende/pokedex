@@ -34,7 +34,7 @@ body {
 }
 
 main {
-background-color: var(---blanco);
+    background-color: var(---blanco);
     padding: 2rem;
     margin: 1.5rem;
 }
@@ -43,7 +43,7 @@ background-color: var(---blanco);
 input {
     font-size: 2rem;
     align-items: center;
-    width: 75%;
+    width: 85%;
     padding: 1rem;
     text-align: center;
     margin: 2rem;
@@ -126,7 +126,7 @@ button i:hover {
 .btn_header img {
     font-size: 100vh;
 
-  
+
     height: 110px;
 
 }
@@ -136,15 +136,16 @@ button i:hover {
 .lista {
 
     padding: 0.5rem;
+    
     width: 100%;
 
     display: flex;
     list-style: none;
-    
+
     flex-wrap: wrap;
     gap: 1rem;
     padding-left: 2rem;
-   align-content: space-between;
+    align-content: space-between;
 
 }
 
@@ -155,7 +156,7 @@ button i:hover {
     color: var(---blanco);
     padding: 1rem;
     margin: 1rem 1rem;
-    
+
     width: 15rem;
     height: 3rem;
     cursor: pointer;
@@ -180,10 +181,10 @@ button i:hover {
 
 .busqueda {
     width: 100%;
-  
+
     display: inline-block;
-   align-content: center;
-   padding: 1rem 5rem 1rem 5rem;
+    align-content: center;
+    padding: 1rem 5rem 1rem 5rem;
 
 }
 
@@ -288,6 +289,7 @@ button i:hover {
     margin: 0.5rem;
     border-radius: 10rem grey solid;
     background-color: #0a5a4e;
+    padding-left: 5rem;
 
 
 }
@@ -327,18 +329,21 @@ button i:hover {
 .info-pokemon-b {
 
     margin-left: 0.2rem;
+    width: 50%;
+    padding-top:3rem ;
 }
- 
+
 
 .buscarpokemon {
     background-color: #41B06E;
     display: inline-block;
-   margin-left: 15rem;
-   width: 100%;
+    margin-left: 10rem;
+    width: 100%;
 
 
 
 }
+
 .pokemon-b {
     width: 50%;
 }
@@ -352,105 +357,124 @@ button i:hover {
     display: flex;
     width: 100%;
 }
+
 #busquedapokemon {
     color: var(---blanco);
     font-size: 2rem;
     text-align: center;
     width: 100%;
+   
 
 }
 
 
 
-@media (min-width: 360px) and (max-width: 768px) {
+@media (max-width: 767px) {
     body {
         width: 100%;
-       }
+    }
 
-   
-   main {
-    width: 90%;
-    padding-top: 0.5rem;
-        }
 
-     input {
-             width: 150%;
-             font-size: 2rem;
-             align-items: center;
-             margin-left: -3rem;
-           }
+    main {
+        width: 90%;
+        padding-top: 0.5rem;
+       
+    }
+
+    input {
+        width: 115%;
+        font-size: 2rem;
+        align-items: center;
+        margin-left: -1rem;
+    }
 
     button i {
         align-items: center;
-        margin-left: 4rem;
+        margin-left: 9.5rem;
         font-size: 3rem;
-       }
+    }
 
 
-     .pokemon {
+    .pokemon {
         width: 100%;
-       margin-left: 0.8rem;
-        }
-  
-     .logo_imagen {
-    font-size: 33%;
-    margin :-1rem 0.1rem -0.8rem 0.1rem;
-    height: 285%;
-      }
+        margin-left: 0.8rem;
+    }
 
-  
-   .botones {
-    margin-left: 0.1rem;
-    margin-right: 0.1rem;
-   }
+    .logo_imagen {
+        font-size: 33%;
+        margin: -1rem 0.1rem -0.8rem 0.1rem;
+        height: 285%;
+    }
 
 
-   .btn {
-    width: 90%;
-    margin: 0.2rem  1rem  0.2rem 1rem;
-    padding: 0.6rem;
-    font-size: 1.2rem;
-   }
- 
-   .busqueda {
-    display: block;
-    justify-content: center;
-   }
+    .botones {
+        margin-left: 0.1rem;
+        margin-right: 0.1rem;
+    }
 
 
-  
-   .buscarpokemon {
-        width: 120%;
-       
-    padding: 1rem;
-    margin-top: 0.1rem;  
-       margin-left: -2rem;
-      margin-right: -20rem;
-      display: block;
-      
-   }
+    .btn {
+        width: 90%;
+        margin: 0.2rem 1rem 0.2rem 1rem;
+        padding: 0.6rem;
+        font-size: 1.2rem;
+    }
 
-   .img-pokemon-b {
-       display: block;
-       width: 100%;
-      
+    .busqueda {
+        display: block;
+        justify-content: center;
+    }
 
-   }
 
-   .sonido i {
-     margin-left: -1rem;
-  background-color: #609d14;
-   }
+
+    .buscarpokemon {
+        width: 110%;
+
+        padding: 1rem;
+        margin-top: 0.1rem;
+        margin-left: -1.5rem;
+        margin-right: -20rem;
+        margin-bottom:1rem ;
+        display: block;
+
+    }
+
+    .img-pokemon-b {
+        display: block;
+        width: 100%;
+
+
+    }
+.info-pokemon-b {
+
+    margin-left: 0.2rem;
+    width: 100%;
+    padding-top: 1rem;
+   
+}
+    .sonido i {
+        margin-left: -1rem;
+        background-color: #609d14;
+    }
+
     .pokemones {
         margin-bottom: 1rem;
     }
-         
+         .peso1,
+         .tipo1,
+         .altura1 {
+          padding-left: 5rem;
     
+    
+         }
+
+
     #tipos_buscar {
-                     width: 100%;
-        
-        
-                }
+        width: 100%;
+
+
+    }
+
     #busquedapokemon {
 
         width: 100%;
@@ -458,19 +482,59 @@ button i:hover {
     }
 }
 
+@media (min-width: 1500px) {
+.info-pokemon-b {
 
-@media (min-width: 769px) and (max-width: 1023px) {
-    .pokemon {
-            width: 40%;
-            margin-left: 1.5rem;
-        }
-    .buscarpokemon {
-        
-        display: flex;
-        margin: 5rem;
-        margin-top: 0.1rem;
-        width: 100%;
+        margin-left: 0.2rem;
+        width: 60%;
+        padding-top: 5rem;
+      
+
     }
- 
+        .peso1,
+        .tipo1,
+        .altura1 {
+           margin: 2rem;
+           padding: 1rem;
+           font-size: 25px;
+          
+        padding-left: 5rem;
+    
+    
+        }
+        .id_inf {
+            font-size: 1.5rem;
+        }
+
+        .nombre {
+            margin-top: 0.5rem;
+            font-size: 2rem;
+        }
+    
+    
+        .sonido i {
+           font-size: 55px; 
+           color: #fff;
+        }
+
+        main {
+            margin-left: 5rem;
+        }
+        
+             
+        .pokemon-varios {
+            padding-left: 8rem;
+
+        }
+ .id {
+ font-size: 2.5rem;
+ }
+  .lista {
+    margin-left: 3rem;
+    margin-right: 5rem;
+  }
 }
+
+
+
 
