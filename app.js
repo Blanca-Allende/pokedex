@@ -6,6 +6,8 @@ const listapokemones = document.querySelector("#listapokemones");
 
 const URL = "https://pokeapi.co/api/v2/pokemon/";
 
+//-----------------------------------------------------------------------//
+
 // Evento para el botón de tipos
 botonTipos.addEventListener('click', () => {
     // Crear contenedor para los tipos de Pokémon
@@ -88,6 +90,13 @@ function mostrarpokemones(poke) {
 
     listapokemones.append(div);
 }
+
+
+
+
+
+//---------------------------------------------------------------------------------//
+
 
 
 // Evento para el botón de búsqueda

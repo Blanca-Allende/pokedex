@@ -386,11 +386,12 @@ button i:hover {
         font-size: 2rem;
         align-items: center;
         margin-left: -1rem;
+       
     }
 
     button i {
         align-items: center;
-        margin-left: 9.5rem;
+        margin-left: 8rem;
         font-size: 3rem;
     }
 
