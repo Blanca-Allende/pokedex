@@ -369,7 +369,7 @@ button i:hover {
 
 
 
-@media (max-width: 767px) {
+@media (max-width: ) {
     body {
         width: 100%;
     }
@@ -403,7 +403,7 @@ button i:hover {
 
     .logo_imagen {
         font-size: 33%;
-        margin: -1rem 0.1rem -0.8rem 0.1rem;
+        margin: -2rem 0.1rem  1rem 0.1rem;
         height: 285%;
     }
 
@@ -534,6 +534,17 @@ button i:hover {
     margin-left: 3rem;
     margin-right: 5rem;
   }
+}
+
+
+@media (min-width: 991.98px) { 
+
+    .logo_imagen {
+        font-size: 33%;
+        margin: -2.5rem 0.1rem  1rem 0.1rem;
+        height: 285%;
+    }
+
 }
 
 
